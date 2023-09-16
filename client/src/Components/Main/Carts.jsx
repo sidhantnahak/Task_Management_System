@@ -4,7 +4,6 @@ import NewsItem from './NewsItem';
 import { useAlert } from 'react-alert';
 import { Clear_Errors, getall_carts } from '../../redux/taskAction';
 import { delete_cart_reset } from '../../redux/taskConstants';
-import Loader from '../Loader&Notfound/Loader';
 
 const Carts = () => {
 
@@ -28,7 +27,7 @@ const dispatch=useDispatch();
             dispatch(getall_carts())
         }
 
-    }, [dispatch, error, isCartDeleted])
+    }, [dispatch, error, isCartDeleted,alert])
 
 
 

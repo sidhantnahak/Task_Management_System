@@ -47,6 +47,7 @@ ul{
     font-size: 1.2rem;
     color: rgb(67, 52, 52);
     font-weight: 700;
+    text-decoration: none;
 }
 
 #bar{
@@ -67,14 +68,18 @@ ul{
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 1;
     padding: 0.5rem 0;
+
     display: none;
     
 }
 li{
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.sidebar2 ul a{
+.sidebar2 ul li a{
     padding: 0.5rem 0;
 font: bold;
     display: flex;
@@ -85,11 +90,14 @@ font: bold;
     font-size: 1.2em;
     color: white;
     transition: scale 0.3s ease;
+    text-decoration: none;
+
   
 }
-.sidebar2 ul a:hover{
+.sidebar2 a:hover{
     font-weight: 700;
     text-transform: none;
+    cursor: pointer;
 }
 
 .sidebar2.open {
@@ -122,13 +130,17 @@ font: bold;
   }
 
   .buttom_nav_links{
-
+z-index: 5;
     display: none;
   }
   .buttom_nav_links>a{
-    padding-right: 1rem;
+    padding: 0 1.5rem;
     border-right: 2px solid white;
     color: white;
+    font-size: 0.9rem;
+  }
+  .buttom_nav_links :last-child{
+    border: none;
   }
 @media(max-width:700px){
   .sidebar{
@@ -143,9 +155,9 @@ font: bold;
 }
 .buttom_nav_links{
     display: block;
-    height: 30px;
+    height: 35px;
     width: 310px;
-    border-radius: 14px;
+    border-radius: 20px;
     background-color: black;
     color: white;
     display: flex;
@@ -155,7 +167,6 @@ font: bold;
     left: 50%;
     align-items: center;
     justify-content: space-evenly;
-    padding: 1rem 0.5rem;
 
 }
 .buttom_nav_links>a:hover{

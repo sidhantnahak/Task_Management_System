@@ -2,8 +2,9 @@
 import axios from 'axios'
 import { add_cart_fail, add_cart_request, add_cart_sucess, clear_errors, delete_cart_fail, delete_cart_request, delete_cart_sucess, delete_task_fail, delete_task_request, delete_task_sucess, getall_cart_fail, getall_cart_request, getall_cart_sucess, getallnews_fail, getallnews_request, getallnews_sucess, getalltask_fail, getalltask_request, getalltask_sucess, gettask_fail, gettask_request, gettask_sucess, register_task_fail, register_task_request, register_task_sucess, update_task_fail, update_task_request, update_task_sucess } from './taskConstants'
 
-// const backend_url = "https://task-management-system-71zz.onrender.com"
-const backend_url = "http://localhost:4000"
+const backend_url = "https://task-management-system-atpl.onrender.com"
+
+// const backend_url = "http://localhost:4000"
 
 export const register_task = (data) => async (dispatch) => {
     const { title, description, status } = data;

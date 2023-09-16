@@ -37,7 +37,6 @@ const dispatch=useDispatch();
           <Route  path='/dashboard' element={<Main note={note}/>} />
           <Route  path='/news' element={<News/>} />
           <Route  path='/carts' element={<Carts/>} />
-
           <Route path='*' element={<Notfound />} />
 
         </Routes>
@@ -46,5 +45,4 @@ const dispatch=useDispatch();
     </>
   );
 }
-// DB_URI=mongodb://localhost:27017/Database1
 export default App;

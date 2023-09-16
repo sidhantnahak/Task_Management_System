@@ -31,7 +31,7 @@ const dispatch=useDispatch();
             dispatch(getall_carts())
         }
 
-    }, [dispatch,isAdded, error, isCartDeleted])
+    }, [dispatch,isAdded, error, isCartDeleted,alert])
     return (
         <div className='main2_container'>
 

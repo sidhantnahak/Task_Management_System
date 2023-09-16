@@ -55,8 +55,8 @@ const Home = ({ setnote }) => {
                     <li><Link to="/dashboard" onClick={() => setnote("To Do")}>To Do Tasks</Link></li>
                     <li><Link to="/dashboard" onClick={() => setnote("Doing")} >Doing Tasks</Link></li>
                     <li><Link to="/dashboard" onClick={() => setnote("Done")} >Done Tasks</Link></li>
-                    <Link to="/news" >Get News </Link>
-                    <Link to="/carts" >My Cart {carts && carts.length} </Link>
+                   <li><Link to="/news" >Get News </Link></li> 
+                     <li><Link to="/carts" >My Cart {carts && carts.length} </Link></li>
 
 
 
