@@ -6,6 +6,7 @@ import { useAlert } from 'react-alert'
 import { Clear_Errors, getall_task, register_task } from '../../redux/taskAction'
 import { delete_task_reset, register_task_reset, update_task_reset } from '../../redux/taskConstants'
 import Loader from '../Loader&Notfound/Loader'
+import AddTaskButton from './AddTaskButton'
 
 export const Main = ({ note }) => {
 
@@ -137,9 +138,9 @@ export const Main = ({ note }) => {
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
 
                         {note === "All Tasks" && tasks && tasks.length === 0 && <button onClick={()=>ref.current.focus()} className='btn btn-primary'>Add a Task</button>}
-                        {note === "To Do" && tasks && tasks.filter(e => e.status === "To Do").length === 0 && <button onClick={()=>ref.current.focus()} className=' btn btn-primary  '>Add a Task </button>}
-                        {note === "Doing" && tasks && tasks.filter(e => e.status === "Doing").length === 0 && <button onClick={()=>ref.current.focus()}className='btn btn-primary'>Add a Task</button>}
-                        {note === "Done" && tasks && tasks.filter(e => e.status === "Done").length === 0 && <button onClick={()=>ref.current.focus()} className='btn btn-primary'>Add a Task</button>}
+                        {note === "To Do" && tasks && tasks.filter(e => e.status === "To Do").length === 0 && <AddTaskButton ref={ref}/>}
+                        {note === "Doing" && tasks && tasks.filter(e => e.status === "Doing").length === 0 && <AddTaskButton ref={ref}/>}
+                        {note === "Done" && tasks && tasks.filter(e => e.status === "Done").length === 0 && <AddTaskButton ref={ref}/>}
                     </div>
                 </>
 
